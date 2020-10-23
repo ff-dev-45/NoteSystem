@@ -1,5 +1,6 @@
 package noteSystem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Item {
@@ -19,6 +20,17 @@ public class Item {
         }
     }
 
+    public boolean checkForTag(Tag tag){
+        if(_tags.contains(tag)){
+            return true;
+        }
+        for(Tag containedTag: _tags){
+            if(containedTag.checkIsTag(tag)){
+                return true;
+            }
+        }
+        return false;
+    }
 
     public String getName(){ return _name; }
     public String getContents() {return _contents;}

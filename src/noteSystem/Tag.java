@@ -1,10 +1,11 @@
 package noteSystem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tag {
     private String _tagName;
-    private List<Tag> isAlso;
+    private List<Tag> isAlso= new ArrayList<Tag>();
 
     public Tag(String tagName){
         _tagName=tagName;
@@ -23,6 +24,11 @@ public class Tag {
     public boolean checkIsTag(Tag tag){
         if(isAlso.contains(tag)){
             return true;
+        }
+        for(Tag isAlsoTag: isAlso){
+            if(isAlsoTag.checkIsTag(tag)){
+                return true;
+            }
         }
         return false;
     }

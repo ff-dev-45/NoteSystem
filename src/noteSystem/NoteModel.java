@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 import java.util.Comparator;
+import java.util.List;
 
 public class NoteModel {
 
@@ -47,10 +48,21 @@ public class NoteModel {
         _items.sort(new Comparator<Item>() {
             @Override
             public int compare(Item o1, Item o2) {
-                if(o1.toString().equals(tag.toString())){
+
+                boolean o1HasTag=o1.checkForTag(tag);
+                boolean o2HasTag=o2.checkForTag(tag);
+                if(o1HasTag&&o2HasTag){
                     return 0;
                 }
-                return 1;
+                else if(o1HasTag&&!o2HasTag){
+                    return -1;
+                }
+                else if(!o1HasTag&&o2HasTag){
+                    return 1;
+                }
+                else{
+                    return 0;
+                }
             }
         });
     }

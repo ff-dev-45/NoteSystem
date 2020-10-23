@@ -39,7 +39,7 @@ public class Controller implements Initializable {
         if(sortSelection.getSelectionModel().isEmpty() || "<None>".equals(tag.toString())){
             //_model.sort
         } else{
-            //_model.sort(
+            _model.sort(tag);
         }
     }
 }

@@ -27,7 +27,7 @@ public class newItemForm {
 
         try{
             Parent root = FXMLLoader.load(newItemForm.class.getResource("/noteSystem/newItemview.fxml"));
-            scene = new Scene(root, 400, 300);
+            scene = new Scene(root, 300, 400);
         } catch (IOException e){
             e.printStackTrace();
         }
