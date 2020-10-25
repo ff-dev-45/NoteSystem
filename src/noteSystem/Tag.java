@@ -17,6 +17,14 @@ public class Tag {
         }
     }
 
+    public void addTags(List<Tag> tags){
+        for(Tag tag: tags){
+            if(!isAlso.contains(tag)){
+                isAlso.add(tag);
+            }
+        }
+    }
+
     public List<Tag> getTags(){
         return isAlso;
     }

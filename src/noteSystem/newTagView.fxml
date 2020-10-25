@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="noteSystem.NewTagController">
+   <children>
+      <Label layoutX="30.0" layoutY="53.0" text="Tag Name:">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <TextField fx:id="nameSubmission" layoutX="124.0" layoutY="54.0" />
+      <Button layoutX="30.0" layoutY="134.0" mnemonicParsing="false" onAction="#addTag" text="Add Tag" />
+      <ListView fx:id="tagView" layoutX="30.0" layoutY="174.0" prefHeight="112.0" prefWidth="256.0" />
+      <ComboBox fx:id="tagOptions" layoutX="97.0" layoutY="134.0" prefHeight="26.0" prefWidth="187.0" />
+      <Button layoutX="113.0" layoutY="329.0" mnemonicParsing="false" onAction="#createTag" text="Create Tag" />
+   </children>
+</AnchorPane>

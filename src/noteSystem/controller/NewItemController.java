@@ -1,4 +1,4 @@
-package noteSystem;
+package noteSystem.controller;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -7,6 +7,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import noteSystem.Item;
+import noteSystem.NoteModel;
+import noteSystem.Tag;
+import noteSystem.newItemForm;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -32,7 +36,7 @@ public class NewItemController implements Initializable {
 
     public void addTag(){
         Tag tag = (Tag)allTags.getSelectionModel().getSelectedItem();
-        if(!tagsSelected.contains(tag)) {
+        if(!tagsSelected.contains(tag) && tag != null) {
             tagsSelected.add(tag);
         }
     }

@@ -1,10 +1,14 @@
-package noteSystem;
+package noteSystem.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
+import noteSystem.NoteModel;
+import noteSystem.Tag;
+import noteSystem.newItemForm;
+import noteSystem.newTagForm;
 
 import java.net.URL;
 import java.util.ResourceBundle;
