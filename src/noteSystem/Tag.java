@@ -46,6 +46,9 @@ public class Tag {
     @Override
     public String toString(){
         String output = "<"+_tagName+">";
+        /*for(Tag tag: isAlso){
+             output+=tag.toString();
+        }*/
         return output;
     }
 }
